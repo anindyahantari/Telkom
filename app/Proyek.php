@@ -8,7 +8,7 @@ class Proyek extends Model
 {
     protected $table = 'proyek';
     protected $primaryKey = 'id';
-    protected $fillable = ['id_aspek','id_mitra','nik','judul','tahun','unit_kerja','saat_penggunaan','pemasukan_dokumen','ready_for_service','skema_bisnis','masa_kontrak','jenis_pelanggan','alamat_delivery'];
+    protected $fillable = ['id_aspek','id_mitra','nik','id_pelanggan','judul','tahun','unit_kerja','saat_penggunaan','pemasukan_dokumen','ready_for_service','skema_bisnis','masa_kontrak','jenis_pelanggan','alamat_delivery'];
     public $incrementing = true;
     public $timestamp = true;
 
@@ -30,5 +30,10 @@ class Proyek extends Model
     public function user()
     {
     	return $this->belongsTo('App\User', 'nik', 'nik');
+    }
+
+    public function pelanggan()
+    {
+    	return $this->belongsTo('App\Pelanggan', 'id_pelanggan', 'id_pelanggan');
     }
 }
