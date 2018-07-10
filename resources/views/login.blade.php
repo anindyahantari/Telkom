@@ -29,7 +29,7 @@
                     <div><br></div>
                     <div class="signup mx-auto">
                             <p style="color: white">Belum punya akun?</p>
-                            <a class="login-a" href="signup.html">Sign up</a>
+                            <a class="login-a" href="/signup">Sign up</a>
                     </div>
                 </form>
             </div>
