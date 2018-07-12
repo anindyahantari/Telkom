@@ -11,14 +11,23 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function ()
+{
     return view('login');
 });
 
-Route::get('/signup', function () {
+Route::get('/signup', function ()
+{
 	return view('signup');
 });
 
-Route::get('/AM-dashboard', function () {
+Route::get('/AM-dashboard', function ()
+{
 	return view('dashboard');
 });
+
+
+Route::post('/am/form-pelanggan/insert','AMController@insertPelanggan');
+// Route::get('/admin-jadwal','AdminController@indexJadwal');
+// Route::get('/admin/jadwal/update/{id}', 'AdminController@updateJadwal');
+// Route::get('/admin/jadwal/delete/{id}', 'AdminController@deleteJadwal');
